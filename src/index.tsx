@@ -162,8 +162,9 @@ const _default = {
     return Promise.resolve('Successs');
   },
 
-  disconnect(): Promise<any> {
-    return EscPosPrinter.disconnect();
+  disconnect(): Promise<string> {
+    EscPosPrinter.disconnect();
+    return Promise.resolve('Successs');
   },
 
   startMonitorPrinter(interval: number = 5) {
